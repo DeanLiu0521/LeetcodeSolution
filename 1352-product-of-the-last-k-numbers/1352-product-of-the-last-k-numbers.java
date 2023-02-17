@@ -6,7 +6,7 @@ class ProductOfNumbers {
     }
     
     public void add(int num) {
-        if(num == 0){
+        if(num==0){
             preProduct.clear();
             preProduct.add(1);
             return;
@@ -17,8 +17,9 @@ class ProductOfNumbers {
     
     public int getProduct(int k) {
         int n = preProduct.size();
-        if(k > n-1)
+        if(k>n-1){
             return 0;
+        }
         return preProduct.get(n-1)/preProduct.get(n-k-1);
     }
 }
